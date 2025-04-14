@@ -1,3 +1,4 @@
+/*
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +40,191 @@
 
 .read-the-docs {
   color: #888;
+}
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #eaf4ec; 
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #000000;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+
+form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 25px 20px;
+  background-color:#ffffff;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #b2d8b2;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #000000;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.3);
+}
+
+form button {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: #000000;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+form button:hover {
+  background-color: #388e3c;
+}
+
+
+.expense-table-container {
+  flex: 20;
+  min-width: 400px;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  overflow-x: auto;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expense-table th,
+.expense-table td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #b2d8b2;
+}
+
+.expense-table th {
+  background-color: #b2d8b2;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.expense-table tbody tr:hover {
+  background-color:#f5fff5 ;
+}
+
+.delete-btn {
+  background-color: #4CAF50;
+  color: #000000;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+  background-color: #388e3c;
+}
+
+.no-expenses {
+  text-align: center;
+  padding: 20px;
+  color: #b2d8b2;
+  font-style: italic;
+}
+
+
+.search-bar {
+  flex: 1 1 300px;
+  max-width: 400px;
+  padding: 0 10px;
+}
+
+.search-bar input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #b2d8b2;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #000000;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.4);
+  outline: none;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .expense-table-container,
+  .search-bar,
+  form {
+    max-width: 100%;
+    width: 100%;
+  }
 }
